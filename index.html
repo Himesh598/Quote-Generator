@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+                background-color: #44e4f2;
+            }
+            #div1{
+    border-radius:40%;            
+    background-color:white ;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 125px;
+}
+
+button{
+   padding: 10px;
+   background-color:#769e6f;
+   border-radius:10% ;
+}
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            <br><br>
+        <h2>motivational quote generator</h2>
+        <p id="p1"></p>
+        <br><br><br>
+        </div>
+        <br><br><br>
+        <button onclick="generateQuote()">motivational quote</button>
+        <script>
+            function generateQuote(){
+let theArray = ["The only way to do great work is know your halfway there- theodore roosevelt", "The only thing we have to fear is fear itself: A quote by Franklin D. Roosevelt", "It does not matter how slowly you go so long as you do not stop: A quote by Confucius", "Believe you can and you're halfway there"];
+let randomGen = Math.floor(Math.random() * theArray.length);
+let randomElement = theArray[randomGen];
+   document.getElementById("p1").innerHTML =  randomElement
+            }
+        </script>
+    </body>
+</html>
